@@ -3061,3 +3061,18 @@
   ]
 }  
 ]
+
+},
+{ "id": "hidmouse",
+  "name": "Bluetooth mouse",
+  "shortName":"Mouse",
+  "icon": "app.png",
+  "version":"0.01",
+  "description": "Simple bluetooth mouse",
+  "tags": "bluetooth",
+  "storage": [
+    {"name":"hidmouse.app.js","url":"app.js"},
+    {"name":"hidmouse.img","url":"app-icon.js","evaluate":true}
+  ]
+}
+]
