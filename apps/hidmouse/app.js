@@ -9,8 +9,16 @@ var mouse = require("ble_hid_mouse");
 NRF.setServices(undefined, { hid : mouse.report });
 
 function btnPressed() {
+  g.reset();
+  g.clearRect(50,50,100,120);
+  g.drawString("failed", 50, 50);
+  
   mouse.send(0,0,mouse.BUTTONS.LEFT); // X movement, Y movement, buttons pressed
+  
+  g.clearRect(50,50,100,120);
+  g.drawString("Success", 50, 50); 
 }
+
 
 // trigger btnPressed whenever the button is pressed
 setWatch(btnPressed, BTN, {edge:"rising",repeat:true,debounce:50});
